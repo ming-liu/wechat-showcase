@@ -18,6 +18,12 @@
 		47CD93771E6B07130099C8BD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CD93761E6B07130099C8BD /* LoginViewController.swift */; };
 		47CD93791E6B0BC70099C8BD /* ChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CD93781E6B0BC70099C8BD /* ChatTableViewController.swift */; };
 		47CD937C1E6BC6660099C8BD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CD937B1E6BC6660099C8BD /* WelcomeViewController.swift */; };
+		47CD937F1E6BCDDC0099C8BD /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CD937E1E6BCDDC0099C8BD /* HttpClient.swift */; };
+		47CD93821E6BD1300099C8BD /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CD93811E6BD1300099C8BD /* Friend.swift */; };
+		47CD93851E6BD1990099C8BD /* FriendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CD93841E6BD1990099C8BD /* FriendService.swift */; };
+		47CD93871E6C44330099C8BD /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CD93861E6C44330099C8BD /* ImageViewController.swift */; };
+		47CD93891E6C5EAA0099C8BD /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CD93881E6C5EAA0099C8BD /* ChooseViewController.swift */; };
+		47CD938C1E73B59E0099C8BD /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CD938B1E73B59E0099C8BD /* FriendCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,12 @@
 		47CD93761E6B07130099C8BD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		47CD93781E6B0BC70099C8BD /* ChatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewController.swift; sourceTree = "<group>"; };
 		47CD937B1E6BC6660099C8BD /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		47CD937E1E6BCDDC0099C8BD /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		47CD93811E6BD1300099C8BD /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		47CD93841E6BD1990099C8BD /* FriendService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendService.swift; sourceTree = "<group>"; };
+		47CD93861E6C44330099C8BD /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		47CD93881E6C5EAA0099C8BD /* ChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
+		47CD938B1E73B59E0099C8BD /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +119,14 @@
 			children = (
 				47CD93461E6ABB8F0099C8BD /* AppDelegate.swift */,
 				47CD937A1E6BC62C0099C8BD /* controller */,
+				47CD937D1E6BCDA00099C8BD /* http */,
+				47CD93801E6BD0E70099C8BD /* bean */,
+				47CD93831E6BD1880099C8BD /* service */,
 				47CD934A1E6ABB8F0099C8BD /* Main.storyboard */,
-				47CD934D1E6ABB8F0099C8BD /* Assets.xcassets */,
 				47CD934F1E6ABB8F0099C8BD /* LaunchScreen.storyboard */,
 				47CD93521E6ABB8F0099C8BD /* Info.plist */,
+				47CD934D1E6ABB8F0099C8BD /* Assets.xcassets */,
+				47CD938A1E73B5510099C8BD /* view */,
 			);
 			path = "wechat-showcase";
 			sourceTree = "<group>";
@@ -141,8 +157,42 @@
 				47CD93481E6ABB8F0099C8BD /* ViewController.swift */,
 				47CD93741E6ABDA80099C8BD /* BuddyTableViewController.swift */,
 				47CD937B1E6BC6660099C8BD /* WelcomeViewController.swift */,
+				47CD93861E6C44330099C8BD /* ImageViewController.swift */,
+				47CD93881E6C5EAA0099C8BD /* ChooseViewController.swift */,
 			);
 			name = controller;
+			sourceTree = "<group>";
+		};
+		47CD937D1E6BCDA00099C8BD /* http */ = {
+			isa = PBXGroup;
+			children = (
+				47CD937E1E6BCDDC0099C8BD /* HttpClient.swift */,
+			);
+			name = http;
+			sourceTree = "<group>";
+		};
+		47CD93801E6BD0E70099C8BD /* bean */ = {
+			isa = PBXGroup;
+			children = (
+				47CD93811E6BD1300099C8BD /* Friend.swift */,
+			);
+			name = bean;
+			sourceTree = "<group>";
+		};
+		47CD93831E6BD1880099C8BD /* service */ = {
+			isa = PBXGroup;
+			children = (
+				47CD93841E6BD1990099C8BD /* FriendService.swift */,
+			);
+			name = service;
+			sourceTree = "<group>";
+		};
+		47CD938A1E73B5510099C8BD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				47CD938B1E73B59E0099C8BD /* FriendCell.swift */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,10 +331,16 @@
 			files = (
 				47CD93771E6B07130099C8BD /* LoginViewController.swift in Sources */,
 				47CD93751E6ABDA80099C8BD /* BuddyTableViewController.swift in Sources */,
+				47CD93891E6C5EAA0099C8BD /* ChooseViewController.swift in Sources */,
+				47CD93871E6C44330099C8BD /* ImageViewController.swift in Sources */,
 				47CD93491E6ABB8F0099C8BD /* ViewController.swift in Sources */,
 				47CD937C1E6BC6660099C8BD /* WelcomeViewController.swift in Sources */,
+				47CD937F1E6BCDDC0099C8BD /* HttpClient.swift in Sources */,
+				47CD938C1E73B59E0099C8BD /* FriendCell.swift in Sources */,
+				47CD93851E6BD1990099C8BD /* FriendService.swift in Sources */,
 				47CD93471E6ABB8F0099C8BD /* AppDelegate.swift in Sources */,
 				47CD93791E6B0BC70099C8BD /* ChatTableViewController.swift in Sources */,
+				47CD93821E6BD1300099C8BD /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

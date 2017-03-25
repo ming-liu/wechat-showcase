@@ -6,46 +6,53 @@
 //  Copyright © 2017年 刘明. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class BuddyTableViewController: UITableViewController {
 
+    private var friendService = FriendService()
+    
+    private struct Constants {
+        static let FriendCellReuseIdentifier = "Friend"
+    }
+    
+    private var friends = [Friend]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        loadFriends()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    private func loadFriends() {
+        friendService.getFriends(offset: 0, limit: 50) { (friends) in
+            self.friends = friends
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return friends.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.FriendCellReuseIdentifier, for: indexPath) as? FriendCell
+        cell?.friend = friends[indexPath.row]
+        return cell!
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
