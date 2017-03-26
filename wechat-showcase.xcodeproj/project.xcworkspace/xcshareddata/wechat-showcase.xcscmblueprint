@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7A863054E30BB2D3D385F270D704C0E13A1B1187",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7A863054E30BB2D3D385F270D704C0E13A1B1187" : 9223372036854775807,
+    "C3D8ED1CB28D809ADCE2C0DE74935E8A502ACD53" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C9AEEBC5-9F6E-4400-B447-360978E70AC4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7A863054E30BB2D3D385F270D704C0E13A1B1187" : "wechat-showcase\/",
+    "C3D8ED1CB28D809ADCE2C0DE74935E8A502ACD53" : "wechat-showcase\/CryptoSwift\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "wechat-showcase",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "wechat-showcase.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ming-liu\/wechat-showcase.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7A863054E30BB2D3D385F270D704C0E13A1B1187"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/krzyzanowskim\/CryptoSwift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C3D8ED1CB28D809ADCE2C0DE74935E8A502ACD53"
+    }
+  ]
+}

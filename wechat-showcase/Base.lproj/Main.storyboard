@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1YX-gx-rKT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0b2-PS-mWb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -45,7 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgg-gf-gak" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="953" y="-1229"/>
+            <point key="canvasLocation" x="-2194" y="1970"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wVz-71-CJd">
@@ -61,7 +61,64 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZK-fZ-2bc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="-1229"/>
+            <point key="canvasLocation" x="-3330" y="2689"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4Br-WW-lxp">
+            <objects>
+                <viewController id="QVa-EL-T2i" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g7S-ST-qtF"/>
+                        <viewControllerLayoutGuide type="bottom" id="xqd-97-KQM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U0Y-zA-5A8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="view1" selectedImage="view2" id="5Tc-F4-uu7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bWc-kM-Kvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2327" y="-1096"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zJ3-rJ-2nY">
+            <objects>
+                <viewController id="jI1-if-LDH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a33-ti-HNL"/>
+                        <viewControllerLayoutGuide type="bottom" id="LFs-SU-FV9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Y7-Os-HQx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="contact1" selectedImage="contact2" id="msA-Vp-N4E"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rvK-Er-CfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2326" y="-1921"/>
+        </scene>
+        <!--Main Controller-->
+        <scene sceneID="7k7-Nw-jSu">
+            <objects>
+                <tabBarController id="0b2-PS-mWb" customClass="MainController" customModule="wechat_showcase" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="IeL-Ij-3Dm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1YX-gx-rKT" kind="relationship" relationship="viewControllers" id="Y6Q-QJ-cjL"/>
+                        <segue destination="jI1-if-LDH" kind="relationship" relationship="viewControllers" id="VCe-fI-0K6"/>
+                        <segue destination="QVa-EL-T2i" kind="relationship" relationship="viewControllers" id="5n8-Ho-zcw"/>
+                        <segue destination="wxs-FK-1QC" kind="relationship" relationship="viewControllers" id="md4-fW-UQP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3CO-Qn-yRi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4119" y="-1071"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="dYk-rg-47L">
@@ -74,7 +131,7 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uet-es-fuZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-796" y="-996"/>
+            <point key="canvasLocation" x="-5135" y="1779"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="SmC-Cw-aVH">
@@ -101,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mq-ze-Alr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="-469.1154422788606"/>
+            <point key="canvasLocation" x="-3330" y="1627"/>
         </scene>
         <!--微信-->
         <scene sceneID="fwX-5M-CVe">
@@ -183,7 +240,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cf9-dF-y6Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="217.24137931034485"/>
+            <point key="canvasLocation" x="-5135" y="813"/>
         </scene>
         <!--Chat Table View Controller-->
         <scene sceneID="lUE-CQ-Ssm">
@@ -205,7 +262,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nzQ-4t-yiT" id="9Z8-qg-zj8">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -222,7 +279,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a3P-Mx-KXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="878"/>
+            <point key="canvasLocation" x="250" y="2059"/>
         </scene>
         <!--用户登录-->
         <scene sceneID="RSS-Iz-N4i">
@@ -283,7 +340,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XDW-E6-QEp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="7dq-Uh-d5C" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1868" y="224"/>
+            <point key="canvasLocation" x="-1895" y="712"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -311,12 +368,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1575" y="199"/>
+            <point key="canvasLocation" x="-6414" y="-304"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hT8-Uk-Aqg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1YX-gx-rKT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="wechat1" selectedImage="wechat2" id="D2y-cS-k0t">
+                        <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="-2"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kAa-M4-MyC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -329,7 +389,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ey-fH-8GJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-796" y="218.1409295352324"/>
+            <point key="canvasLocation" x="-5135" y="-150"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="28R-UB-gs2">
@@ -347,7 +407,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7a9-ut-fXj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954" y="218"/>
+            <point key="canvasLocation" x="-3330" y="813"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4tx-YJ-Gfi">
@@ -365,10 +425,40 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qhr-hw-bJC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-796" y="879"/>
+            <point key="canvasLocation" x="-636" y="2248"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="K0F-DY-ICj">
+            <objects>
+                <viewController id="wxs-FK-1QC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IAy-h0-Erh"/>
+                        <viewControllerLayoutGuide type="bottom" id="3li-YR-fHc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rid-Ts-vW6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="me1" selectedImage="me2" id="5OX-Td-Fdx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g25-YY-rdV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2873" y="-2908"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="contact1" width="53" height="53"/>
+        <image name="contact2" width="53" height="53"/>
+        <image name="me1" width="53" height="53"/>
+        <image name="me2" width="53" height="53"/>
+        <image name="view1" width="53" height="53"/>
+        <image name="view2" width="53" height="53"/>
+        <image name="wechat1" width="45" height="45"/>
+        <image name="wechat2" width="45" height="45"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QST-FV-BsL"/>
+        <segue reference="hEo-2c-PxV"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
