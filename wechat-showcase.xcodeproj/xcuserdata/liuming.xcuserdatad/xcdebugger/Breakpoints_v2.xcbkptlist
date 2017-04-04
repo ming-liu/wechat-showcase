@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "wechat-showcase/FriendService.swift"
-            timestampString = "510997965.472481"
+            timestampString = "512801666.341707"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "getFriends(offset:limit:callBack:)"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getFriends(id:offset:limit:callBack:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

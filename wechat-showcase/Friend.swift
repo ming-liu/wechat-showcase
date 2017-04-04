@@ -7,10 +7,13 @@
 //
 
 import Foundation
+import EVReflection
 
-class Friend {
+
+class Friend :EVObject{
     var id : String?
     var name : String?
+    var age : String?
     var headerImg : String?
     var lastMsg = "nothing"
     
@@ -21,7 +24,9 @@ class Friend {
         self.lastMsg = lastMsg
     }
     
-    init() {
-        
+    required init() {
+        super.init()
     }
+    
+     
 }

@@ -18,6 +18,7 @@ target 'wechat-showcase' do
   end
 
   pod 'CryptoSwift'
-
-
+  pod 'GzipSwift'
+  pod 'EVReflection'
+  
 end

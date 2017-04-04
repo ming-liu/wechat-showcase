@@ -1,12 +1,20 @@
 PODS:
   - CryptoSwift (0.6.8)
+  - EVReflection (4.6.0):
+    - EVReflection/Core (= 4.6.0)
+  - EVReflection/Core (4.6.0)
+  - GzipSwift (3.1.4)
 
 DEPENDENCIES:
   - CryptoSwift
+  - EVReflection
+  - GzipSwift
 
 SPEC CHECKSUMS:
   CryptoSwift: f21ea03ed3a94e79d241648ce26652cd4810508a
+  EVReflection: 8ff0ff8191aa01b59b1a1de94884fe02cadcee2c
+  GzipSwift: 11ddb2bf253b1cd7b60bb169da20f62ac4348769
 
-PODFILE CHECKSUM: 648705a137f49b89dc75477aa7a198923c6ac239
+PODFILE CHECKSUM: 9a47fd1b7795be169871234e8a197f3358594e24
 
 COCOAPODS: 1.2.0

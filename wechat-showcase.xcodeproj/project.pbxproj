@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		473C966F1E91EF0800EF4656 /* VisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473C966E1E91EF0800EF4656 /* VisionViewController.swift */; };
+		479198601E9097EA0013F520 /* FriendList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4791985F1E9097EA0013F520 /* FriendList.swift */; };
+		479198621E9098010013F520 /* BaseBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479198611E9098010013F520 /* BaseBean.swift */; };
 		47CD93471E6ABB8F0099C8BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CD93461E6ABB8F0099C8BD /* AppDelegate.swift */; };
 		47CD93491E6ABB8F0099C8BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CD93481E6ABB8F0099C8BD /* ViewController.swift */; };
 		47CD934C1E6ABB8F0099C8BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CD934A1E6ABB8F0099C8BD /* Main.storyboard */; };
@@ -55,6 +58,9 @@
 		0E5E6B5BD070957FF9722D40 /* Pods-wechat-showcase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wechat-showcase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wechat-showcase/Pods-wechat-showcase.debug.xcconfig"; sourceTree = "<group>"; };
 		104917E3D3A1964EFF253CBE /* Pods-wechat-showcase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wechat-showcase.release.xcconfig"; path = "Pods/Target Support Files/Pods-wechat-showcase/Pods-wechat-showcase.release.xcconfig"; sourceTree = "<group>"; };
 		26D269712E7D7755AA4802F2 /* Pods_wechat_showcaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wechat_showcaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		473C966E1E91EF0800EF4656 /* VisionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisionViewController.swift; sourceTree = "<group>"; };
+		4791985F1E9097EA0013F520 /* FriendList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendList.swift; sourceTree = "<group>"; };
+		479198611E9098010013F520 /* BaseBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBean.swift; sourceTree = "<group>"; };
 		47CD93431E6ABB8F0099C8BD /* wechat-showcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wechat-showcase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47CD93461E6ABB8F0099C8BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47CD93481E6ABB8F0099C8BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +193,7 @@
 				47CD93861E6C44330099C8BD /* ImageViewController.swift */,
 				47CD93881E6C5EAA0099C8BD /* ChooseViewController.swift */,
 				47D98D6E1E864BCC00C68180 /* MainController.swift */,
+				473C966E1E91EF0800EF4656 /* VisionViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -203,6 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				47CD93811E6BD1300099C8BD /* Friend.swift */,
+				4791985F1E9097EA0013F520 /* FriendList.swift */,
+				479198611E9098010013F520 /* BaseBean.swift */,
 			);
 			name = bean;
 			sourceTree = "<group>";
@@ -546,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47D31EC91E875FE000D067E2 /* EncryptionException.swift in Sources */,
+				479198621E9098010013F520 /* BaseBean.swift in Sources */,
 				47CD93771E6B07130099C8BD /* LoginViewController.swift in Sources */,
 				47CD93751E6ABDA80099C8BD /* BuddyTableViewController.swift in Sources */,
 				47CD93891E6C5EAA0099C8BD /* ChooseViewController.swift in Sources */,
@@ -554,12 +564,14 @@
 				47CD93491E6ABB8F0099C8BD /* ViewController.swift in Sources */,
 				47CD937C1E6BC6660099C8BD /* WelcomeViewController.swift in Sources */,
 				47CD937F1E6BCDDC0099C8BD /* HttpClient.swift in Sources */,
+				473C966F1E91EF0800EF4656 /* VisionViewController.swift in Sources */,
 				47CD938C1E73B59E0099C8BD /* FriendCell.swift in Sources */,
 				47CD93851E6BD1990099C8BD /* FriendService.swift in Sources */,
 				47CD93471E6ABB8F0099C8BD /* AppDelegate.swift in Sources */,
 				47CD93791E6B0BC70099C8BD /* ChatTableViewController.swift in Sources */,
 				47D98D6F1E864BCC00C68180 /* MainController.swift in Sources */,
 				47CD93821E6BD1300099C8BD /* Friend.swift in Sources */,
+				479198601E9097EA0013F520 /* FriendList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

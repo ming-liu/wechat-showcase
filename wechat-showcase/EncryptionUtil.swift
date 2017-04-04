@@ -21,6 +21,12 @@ class EncryptionUtil {
         return bytes
     }
     
+    private static func strictStrip(bytes:[UInt8]) -> [UInt8] {
+        let paddingCount = bytes[bytes.count - 1]
+        let strippt = bytes.dropLast(Int(exactly: paddingCount)! + 16)
+        return Array(strippt)
+    }
+    
     static func encrypt(content: String,key: String,iv:String) throws -> [UInt8]{
         var bytes = [UInt8](content.utf8)
         bytes = padding(bytes: bytes)
@@ -28,6 +34,16 @@ class EncryptionUtil {
         do {
             let encrypted = try AES(key: key, iv: iv, blockMode: .CBC, padding: NoPadding()).encrypt(bytes)
             return encrypted
+        } catch {
+            print(error)
+            throw EncryptionExcetion()
+        }
+    }
+    
+    static func decrypt(encrypto: [UInt8],key: String ,iv:String,strict:Bool) throws -> [UInt8]{
+        do {
+            let decrypto = try AES(key: key, iv: iv, blockMode: .CBC, padding: NoPadding()).decrypt(encrypto)
+            return strictStrip(bytes: decrypto)
         } catch {
             print(error)
             throw EncryptionExcetion()

@@ -7,54 +7,74 @@
 //
 
 import Foundation
+import Gzip
+import EVReflection
 
 class FriendService {
     
-   
-    func getById(id:String) -> Friend {
-        return Friend()
-    }
     
+     static let key = "07C1276A22153AE5";
+     static let iv = "55F9567817BDABFD";
     
-    func getFriends(offset:Int,limit:Int,callBack: @escaping (_ friends: [Friend])->Void ) {
+    func getFriends(id:String, offset:Int,limit:Int,callBack: @escaping (_ friends: [Friend])->Void ) {
+        print("getFriends method in ")
+
         DispatchQueue.global().async {
-            let url = URL(string: "http://localhost:8080/wechat-showcase-web/friend.ac?id=2")
+            let url = URL(string: "http://localhost:8080/wechat-showcase-web/friends.ac")
             var request = URLRequest(url: url!)
-            let queryStr = "name=jordan&age=23"
+            let queryStr = "id=\(id)&offset=\(offset)&limit=\(limit)"
             
-            // queryStr.u
-            //let origin = queryStr.data(using: String.Encoding.utf8)
-            // queryStr.utf8
-            let params = queryStr.data(using: String.Encoding.utf8)
-            request.httpBody = params
             
-            let configuration = URLSessionConfiguration.default
-            let session = URLSession(configuration: configuration)
-            let task = session.dataTask(with: request, completionHandler: { (data, response, error) in
+            do {
+                let params = try EncryptionUtil.encrypt(content: queryStr, key: FriendService.key, iv: FriendService.iv)
                 
-                if error == nil {
+                request.httpMethod = "POST"
+                request.httpBody = Data(params)
+                request.setValue("utf-8", forHTTPHeaderField: "Accept-Charset")
+                request.setValue("\(params.count)", forHTTPHeaderField: "Content-Length")
+                request.setValue("application/octet-stream", forHTTPHeaderField: "Content-type")
+                
+                
+                
+                let configuration = URLSessionConfiguration.default
+                let session = URLSession(configuration: configuration)
+                let task = session.dataTask(with: request, completionHandler: { (data, response, error) in
+                    if error == nil {
+                        do {
+                            //let responseData =   String(data: data!, encoding: String.Encoding.utf8)
+                            //let bytes = data?.bytes
+                            let stript = try EncryptionUtil.decrypt(encrypto: (data?.bytes)!, key: FriendService.key, iv: FriendService.iv, strict: true)
+                            let unzipped = try Data(stript).gunzipped()
+                            //print("data=\(bytes)")
+                            //print("stript=\(stript)")
+                            //print("unzipped=\(unzipped.bytes)")
+
+                            let result = String(bytes: unzipped.bytes, encoding: String.Encoding.utf8)!
+                            let friendList = FriendList(json: result)
+                            let friends = friendList.friends
+                            
+                            DispatchQueue.main.async {
+                                callBack(friends!)
+                            }
+                            //print("response=\(result)")
+                            //print("friendList=\(friendList)")
+                        } catch {
+                            print(error)
+                        }
+                    } else {
+                        print("error=\(error)")
+                    }
                     
-                        let responseData =   String(data: data!, encoding: String.Encoding.utf8)
-                    print("data=\(data)")
-                    print("response=\(responseData)")
-                    
-                } else {
-                    print("error=\(error)")
+                })
+
+                task.resume()
+            } catch {
+                let friends = [Friend]()
+                DispatchQueue.main.async {
+                    callBack(friends)
                 }
-                
-            })
-            print("before task resume")
-            task.resume()
-            print("after task resume")
-            
-            
-            var friends = [Friend]()
-            friends.append(Friend(id: "1",name: "Lily",headerImg: "lilyHeader",lastMsg: "hello"))
-            friends.append(Friend(id: "1",name: "zizi",headerImg: "xuan",lastMsg: "world"))
-            //friends.append(Friend(id: "1",name: "zizi",headerImg: "",lastMsg: "world"))
-            DispatchQueue.main.async {
-                callBack(friends)
             }
+            
         }
         
     }

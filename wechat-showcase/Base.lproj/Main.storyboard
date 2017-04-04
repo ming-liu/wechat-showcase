@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="-3330" y="2689"/>
         </scene>
-        <!--View Controller-->
+        <!--Vision View Controller-->
         <scene sceneID="4Br-WW-lxp">
             <objects>
-                <viewController id="QVa-EL-T2i" sceneMemberID="viewController">
+                <viewController id="QVa-EL-T2i" customClass="VisionViewController" customModule="wechat_showcase" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g7S-ST-qtF"/>
                         <viewControllerLayoutGuide type="bottom" id="xqd-97-KQM"/>
@@ -74,13 +74,23 @@
                     <view key="view" contentMode="scaleToFill" id="U0Y-zA-5A8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pUW-Eb-P8n">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="view1" selectedImage="view2" id="5Tc-F4-uu7"/>
+                    <connections>
+                        <outlet property="webView" destination="pUW-Eb-P8n" id="Dzw-xU-dlh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWc-kM-Kvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2327" y="-1096"/>
+            <point key="canvasLocation" x="-2327.1999999999998" y="-1096.1019490254873"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zJ3-rJ-2nY">
@@ -168,12 +178,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textField key="tableHeaderView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="type to search" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" background="wechat1" id="lIq-h0-8RK">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="9xB-4F-WlH">
+                            <rect key="frame" x="0.0" y="102" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="1" green="0.42628271299208564" blue="0.11055247154630621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Friend" selectionStyle="default" indentationWidth="10" reuseIdentifier="Friend" id="W1t-YL-n60" customClass="FriendCell" customModule="wechat_showcase" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="58" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W1t-YL-n60" id="vRT-oI-Efk">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aBD-lr-gBb">
@@ -237,6 +259,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="footerView" destination="9xB-4F-WlH" id="rZp-Wz-XIU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cf9-dF-y6Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -12,6 +12,12 @@ import UIKit
 class BuddyTableViewController: UITableViewController {
 
     private var friendService = FriendService()
+    private var offset = 0
+    @IBOutlet weak var footerView: UIView!
+    private let pageSize = 10
+    private var loadedAll = 0
+    
+    //private var refreshControl: UIRefreshControl?
     
     private struct Constants {
         static let FriendCellReuseIdentifier = "Friend"
@@ -21,17 +27,33 @@ class BuddyTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        loadFriends()
+        refreshControl = UIRefreshControl()
+        refreshControl?.attributedTitle = NSAttributedString(string: "Hello baby")
+        refreshControl?.addTarget(self, action: #selector(BuddyTableViewController.refresh), for: .valueChanged)
+        refresh()
+        
+    }
+    
+    
+    func refresh() {
+        print("begin to refresh")
+        loadFriends(id: "2")
+        refreshControl?.endRefreshing()
+        print("refreshed")
+        print("hidden=\(footerView.isHidden)"   )
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    private func loadFriends() {
-        friendService.getFriends(offset: 0, limit: 50) { (friends) in
-            self.friends = friends
+    private func loadFriends(id:String) {
+        friendService.getFriends(id:id,offset: offset, limit: offset + pageSize) { (friends) in
+            self.friends.append(contentsOf: friends)
+            if friends.count < self.pageSize {
+                self.loadedAll = 1
+            }
+            self.offset = self.offset + self.pageSize
             self.tableView.reloadData()
         }
     }
@@ -50,6 +72,10 @@ class BuddyTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.FriendCellReuseIdentifier, for: indexPath) as? FriendCell
         cell?.friend = friends[indexPath.row]
+        
+        if (indexPath.row == friends.count - 1) && (loadedAll == 0){
+            refresh()
+        }
         return cell!
     }
     
